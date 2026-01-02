@@ -1,8 +1,10 @@
-//
-// Created by Hubert on 02.01.2026.
-//
 
 #ifndef INTERFACE_H
 #define INTERFACE_H
+#include "struct.h"
 
-#endif //INTERFACE_H
+void pokaz_menu();
+void wypisz(List *b);
+Mech pobierz_od_uzytkownika();
+
+#endif
