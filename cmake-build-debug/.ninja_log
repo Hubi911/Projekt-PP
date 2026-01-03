@@ -1,0 +1,8 @@
+# ninja log v6
+2	94	7891548216853046	CMakeFiles/Main.dir/Main.c.obj	23e6e43e334963ef
+20	105	7891548217032852	CMakeFiles/Main.dir/interface.c.obj	c6e3de4829f04bf6
+11	105	7891548216928173	CMakeFiles/Main.dir/logic.c.obj	7f65e7baa45d1490
+105	301	7891548217874934	Main.exe	8937b6da4709fcda
+11	88	7891551165316775	CMakeFiles/Main.dir/interface.c.obj	c6e3de4829f04bf6
+4	91	7891551165251322	CMakeFiles/Main.dir/logic.c.obj	7f65e7baa45d1490
+91	234	7891551166112947	Main.exe	8937b6da4709fcda
