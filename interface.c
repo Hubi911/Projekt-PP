@@ -27,7 +27,11 @@ void pokaz_menu(){
        printf("Model: %s \n", temp->dana.model);
        printf("Klasa: %s \n", temp->dana.klasa);
        printf("Moc: %d \n", temp->dana.moc);
-       printf("Pilot: %s \n", temp->dana.pilot);
+       if (strcmp(temp->dana.pilot, "-") == 0) {
+         printf("Pilot: \n");
+       } else {
+         printf("Pilot: %s \n", temp->dana.pilot);
+       }
        printf("Stan: %s \n", temp->dana.stan);
        printf("-------------------------\n");
        temp=temp->next;
