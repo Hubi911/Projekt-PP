@@ -28,7 +28,7 @@ void pokaz_menu(){
        printf("Klasa: %s \n", temp->dana.klasa);
        printf("Moc: %d \n", temp->dana.moc);
        if (strcmp(temp->dana.pilot, "-") == 0) {
-         printf("Pilot: \n");
+         printf("Pilot: (brak) \n");
        } else {
          printf("Pilot: %s \n", temp->dana.pilot);
        }
