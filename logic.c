@@ -29,6 +29,7 @@ void zapisz(List *b, char *nazwa_pliku){
 void wczytaj(List *b, char *nazwa_pliku){
   FILE *plik = fopen(nazwa_pliku,"r");
   if (plik == NULL){
+    printf("BLAD: Nie udalo sie otworzyc pliku!\n");
     return;
   }
   Mech robo;
