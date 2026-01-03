@@ -20,10 +20,10 @@ void pokaz_menu(){
      }
 
      Element *temp = b->head;
-     int licznik = 1;
+     int licznik = 0;
      printf("----Lista Mechow----\n");
      while(temp != NULL){
-       printf("Mech %d: \n", licznik);
+       printf("Mech %d: \n", licznik + 1);
        printf("Model: %s \n", temp->dana.model);
        printf("Klasa: %s \n", temp->dana.klasa);
        printf("Moc: %d \n", temp->dana.moc);
