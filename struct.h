@@ -13,7 +13,7 @@ typedef struct {
   } Mech;
 
 typedef struct Element{
-   Mech dane;
+   Mech dana;
    struct Element *next;
  } Element;
 

@@ -13,4 +13,25 @@ void pokaz_menu(){
   printf("7. Wyjdz\n");
   printf("Twoj wybor: ");
  }
- void wypisz(List *b){}
+ void wypisz(List *b){
+   if(b->head==NULL){
+     printf("Naszalista jest pusta.\n");
+     return;
+     }
+
+     Element *temp = b->head;
+     int licznik = 1;
+     printf("----Lista Mechow----\n");
+     while(temp != NULL){
+       printf("Mech %d: \n", licznik);
+       printf("Model: %s \n", temp->dana.model);
+       printf("Klasa: %s \n", temp->dana.klasa);
+       printf("Moc: %d \n", temp->dana.moc);
+       printf("Pilot: %s \n", temp->dana.pilot);
+       printf("Stan: %s \n", temp->dana.stan);
+       printf("-------------------------\n");
+       temp=temp->next;
+       licznik++;
+       }
+       printf("Laczna liczba mechow: %d\n", licznik);
+ }
