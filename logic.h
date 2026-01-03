@@ -2,7 +2,7 @@
 #define LOGIC_H
 #include "struct.h"
 
-void twozenie_listy(List *b);
+void inicjalizacja_listy(List *b);
 void zwolnij_pamiec(List *b);
 int dodaj(List *b, Mech nowy);
 int usun(List *b, char *model);

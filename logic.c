@@ -3,7 +3,7 @@
 #include <string.h>
 #include "logic.h"
 
-void twozenie_listy(List *b){
+void inicjalizacja_listy(List *b){
   b->head = NULL;
   }
 void zwolnij_pamiec(List *b){
