@@ -14,8 +14,18 @@ int dodaj(List *b, Mech nowy){
     return 0;
   }
   nowy_element->dana = nowy;
-  nowy_element->next = b->head;
-  b->head = nowy_element;
+  nowy_element->next = NULL;
+  if (b->head == NULL) {
+    b->head = nowy_element;
+  } else {
+    Element *temp = b->head;
+
+    while (temp->next != NULL) {
+      temp = temp->next;
+    }
+
+    temp->next = nowy_element;
+  }
   return 1;
   }
 int usun(List *b, char *model){
