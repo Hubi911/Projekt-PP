@@ -15,7 +15,7 @@ void pokaz_menu(){
  }
  void wypisz(List *b){
    if(b->head==NULL){
-     printf("Naszalista jest pusta.\n");
+     printf("Nasza lista jest pusta.\n");
      return;
      }
 
