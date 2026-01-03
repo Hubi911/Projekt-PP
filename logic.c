@@ -9,6 +9,14 @@ void inicjalizacja_listy(List *b){
 void zwolnij_pamiec(List *b){
   }
 int dodaj(List *b, Mech nowy){
+  Element *nowy_element = (Element*)malloc(sizeof(Element));
+  if (nowy_element == NULL) {
+    return 0;
+  }
+  nowy_element->dana = nowy;
+  nowy_element->next = b->head;
+  b->head = nowy_element;
+  return 1;
   }
 int usun(List *b, char *model){
   }
