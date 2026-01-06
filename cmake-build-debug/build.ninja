@@ -87,12 +87,6 @@ build Main.exe: C_EXECUTABLE_LINKER__Main_Debug CMakeFiles/Main.dir/Main.c.obj C
 
 
 #############################################
-# Utility command for uruchom
-
-build uruchom: phony CMakeFiles/uruchom Main.exe
-
-
-#############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
@@ -113,14 +107,6 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Custom command for CMakeFiles\uruchom
-
-build CMakeFiles/uruchom | ${cmake_ninja_workdir}CMakeFiles/uruchom: CUSTOM_COMMAND Main.exe || Main.exe
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\polow\OneDrive\Pulpit\Studia\semestr 3\Język c\Projekt-PP" && "C:\Users\polow\OneDrive\Pulpit\Studia\semestr 3\Język c\Projekt-PP\cmake-build-debug\Main.exe" "C:/Users/polow/OneDrive/Pulpit/Studia/semestr 3/Język c/Projekt-PP/cmake-build-debug/projekt_mechy.txt" "C:/Users/polow/OneDrive/Pulpit/Studia/semestr 3/Język c/Projekt-PP/cmake-build-debug/wynik.txt""
-  DESC = Uruchamianie programu Main ze sciezkami...
 
 # =============================================================================
 # Target aliases.

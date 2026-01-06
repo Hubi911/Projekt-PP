@@ -15,8 +15,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						0
 					]
 				}
 			],
@@ -31,8 +30,7 @@
 					"name" : "Projekt_PP",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						0
 					]
 				}
 			],
@@ -43,13 +41,6 @@
 					"id" : "Main::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-Main-Debug-a4af476ab3eb4984aac6.json",
 					"name" : "Main",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "uruchom::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-uruchom-Debug-f0ffd42826b9d44b92fc.json",
-					"name" : "uruchom",
 					"projectIndex" : 0
 				}
 			]
