@@ -7,7 +7,14 @@ void inicjalizacja_listy(List *b){
   b->head = NULL;
   }
 void zwolnij_pamiec(List *b){
+  Element *obecny = b->head;
+  while (obecny != NULL) {
+    Element *do_usuniecia = obecny;
+    obecny = obecny->next;
+    free(do_usuniecia);
   }
+  b->head = NULL;
+}
 int dodaj(List *b, Mech nowy){
   if (strcmp(nowy.stan, "sprawny") != 0 && strcmp(nowy.stan, "uszkodzony") != 0 && strcmp(nowy.stan, "misja") != 0 && strcmp(nowy.stan, "naprawa") && strcmp(nowy.stan, "wymaga_przegladu") != 0 && strcmp(nowy.stan, "w_naprawie") != 0) {
 
