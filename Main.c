@@ -33,7 +33,7 @@ int main(int argc, char *argv[]){
                     if (wynik == 0)
                         printf("BLAD: Mech o takim modelu juz istnieje!\n");
                 else
-                    printf("BLAD: Brak pamieci.\n");
+                    printf("BLAD!\n");
                 break;
             }
             case 3: {

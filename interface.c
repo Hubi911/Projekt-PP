@@ -45,7 +45,7 @@ Mech pobierz_od_uzytkownika() {
   printf("Podaj model: ");
   scanf("%99s", m.model);
 
-  printf("Podaj klase: ");
+  printf("Podaj klase (szturmowy, wsparcia_ogniowego, rekonesansowy, obronny): ");
   scanf("%99s", m.klasa);
 
   do {
@@ -62,7 +62,7 @@ Mech pobierz_od_uzytkownika() {
   printf("Podaj nick pilota: ");
   scanf("%99s", m.pilot);
 
-  printf("Podaj stan (np. sprawny, demontaz, uszkodzony): ");
+  printf("Podaj stan (sprawny, wymaga_przegladu, uszkodzony, w_naprawie, misja): ");
   scanf("%99s", m.stan);
 
   return m;

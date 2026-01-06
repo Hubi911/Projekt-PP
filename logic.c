@@ -9,6 +9,14 @@ void inicjalizacja_listy(List *b){
 void zwolnij_pamiec(List *b){
   }
 int dodaj(List *b, Mech nowy){
+  if (strcmp(nowy.stan, "sprawny") != 0 && strcmp(nowy.stan, "uszkodzony") != 0 && strcmp(nowy.stan, "misja") != 0 && strcmp(nowy.stan, "naprawa") && strcmp(nowy.stan, "wymaga_przegladu") != 0 && strcmp(nowy.stan, "w_naprawie") != 0) {
+
+    return -2;
+        }
+  if (strcmp(nowy.klasa, "szturmowy") != 0 && strcmp(nowy.klasa, "wsparcia_ogniowego") != 0 && strcmp(nowy.klasa, "rekonesansowy") != 0 && strcmp(nowy.klasa, "obronny") !=0) {
+
+    return -2;
+  }
   Element *nowy_element = (Element*)malloc(sizeof(Element));
   if (nowy_element == NULL) {
     return 0;
