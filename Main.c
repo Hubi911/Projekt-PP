@@ -4,13 +4,18 @@
 #include "interface.h"
 
 int main(int argc, char *argv[]){
+    if (argc < 3) {
+        printf("BLAD: Nie podano nazw plikow!\n");
+        printf("Poprawne uzycie: %s <plik_odczytu> <plik_zapisu>\n", argv[0]);
+        return 1;
+    }
   List Mechy_lista;
   inicjalizacja_listy(&Mechy_lista);
 
-  wczytaj(&Mechy_lista, "projekt_mechy.txt");
+  wczytaj(&Mechy_lista, argv[1]);
 
   int wybor = 0;
-    while (wybor != 6) {
+    while (wybor != 7) {
         pokaz_menu();
 
 
@@ -62,9 +67,24 @@ int main(int argc, char *argv[]){
                 wypisz(&Mechy_lista);
                 break;
             case 6:
-                zapisz(&Mechy_lista, "Mechy_zapis.txt");
-                printf("Zapisano dane do pliku %s. Koniec programu.\n", "Mechy_zapis.txt");
+                printf("--- ZAAWANSOWANE ---\n");
+                printf("1. Edytuj mecha\n");
+                printf("2. Wyszukaj mecha\n");
+                printf("3. Zapisz do pliku (z parametru)\n");
+                int wyborr;
+                scanf("%d", &wyborr);
+                if (wyborr == 1)
+                    edytuj_mecha(&Mechy_lista);
+                else if (wyborr == 2)
+                    wyszukaj_mecha(&Mechy_lista);
+                else if (wyborr == 3) {
+                    zapisz(&Mechy_lista, argv[2]);
+                    printf("Zapisano dane do pliku %s.\n", argv[2]);
+                }
                 break;
+            case 7:
+                printf("Konczenie programu...\n");
+            break;
             default:
                 printf("Nieznana opcja. Wybierz 1-6.\n");
         }

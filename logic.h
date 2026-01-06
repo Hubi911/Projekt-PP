@@ -10,7 +10,7 @@ void sort_nazwa(List *b);
 void sort_moc(List *b);
 void zapisz(List *b, char *nazwa_pliku);
 void wczytaj(List *b, char *nazwa_pliku);
-void edytuj_obsluga(List *b);
-void wyszukaj_obsluga(List *b);
+void edytuj_mecha(List *b);
+void wyszukaj_mecha(List *b);
 
 #endif
