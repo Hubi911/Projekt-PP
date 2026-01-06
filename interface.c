@@ -39,3 +39,31 @@ void pokaz_menu(){
        }
        printf("Laczna liczba mechow: %d\n", licznik);
  }
+Mech pobierz_od_uzytkownika() {
+  Mech m;
+
+  printf("Podaj model: ");
+  scanf("%99s", m.model);
+
+  printf("Podaj klase: ");
+  scanf("%99s", m.klasa);
+
+  do {
+    printf("Podaj moc reaktora (0-100): ");
+    if (scanf("%d", &m.moc) == 1) {
+      if (m.moc >= 0 && m.moc <= 100)
+        break;
+    } else {
+      while(getchar() != '\n');
+    }
+    printf("BLAD: Moc musi byc liczba z zakresu 0-100!\n");
+  } while(1);
+
+  printf("Podaj nick pilota: ");
+  scanf("%99s", m.pilot);
+
+  printf("Podaj stan (np. sprawny, demontaz, uszkodzony): ");
+  scanf("%99s", m.stan);
+
+  return m;
+}
