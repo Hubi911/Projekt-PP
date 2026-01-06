@@ -29,7 +29,34 @@ int dodaj(List *b, Mech nowy){
   return 1;
   }
 int usun(List *b, char *model){
+  if (b->head == NULL) return 0; // Pusta lista
+
+  Element *obecny = b->head;
+  Element *poprzedni = NULL;
+
+  while (obecny != NULL) {
+    if (strcmp(obecny->dana.model, model) == 0) {
+
+      if (strstr(obecny->dana.stan, "sprawny") != NULL ||
+          strstr(obecny->dana.stan, "misja") != NULL) {
+        return -2;
+          }
+
+      if (poprzedni == NULL) {
+        b->head = obecny->next;
+      } else {
+        poprzedni->next = obecny->next;
+      }
+
+      free(obecny);
+      return 1;
+    }
+    poprzedni = obecny;
+    obecny = obecny->next;
   }
+  return 0;
+}
+
 void sort_nazwa(List *b){
   }
 void sort_moc(List *b){
