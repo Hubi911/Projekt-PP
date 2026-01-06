@@ -33,13 +33,13 @@ int dodaj(List *b, Mech nowy){
   if (b->head == NULL) {
     b->head = nowy_element;
   } else {
-    Element *temp = b->head;
+    Element *obecny = b->head;
 
-    while (temp->next != NULL) {
-      temp = temp->next;
+    while (obecny->next != NULL) {
+      obecny = obecny->next;
     }
 
-    temp->next = nowy_element;
+    obecny->next = nowy_element;
   }
   return 1;
   }
@@ -73,11 +73,69 @@ int usun(List *b, char *model){
 }
 
 void sort_nazwa(List *b){
-  }
+  if (b->head == NULL) return;
+
+  int zamiana;
+  Element *obecny;
+  Element *koniec = NULL;
+
+  do {
+    zamiana = 0;
+    obecny = b->head;
+
+    while (obecny->next != koniec) {
+      if (strcmp(obecny->dana.model, obecny->next->dana.model) > 0) {
+        Mech schowek = obecny->dana;
+        obecny->dana= obecny->next->dana;
+        obecny->next->dana= schowek;
+        zamiana = 1;
+      }
+      obecny = obecny->next;
+    }
+    koniec = obecny;
+  } while (zamiana);
+}
+
 void sort_moc(List *b){
-  }
+  if (b->head == NULL) return;
+
+  int zamiana;
+  Element *obecny;
+  Element *koniec = NULL;
+
+  do {
+    zamiana = 0;
+    obecny = b->head;
+
+    while (obecny->next != koniec) {
+
+      if (obecny->dana.moc < obecny->next->dana.moc) {
+        Mech schowek = obecny->dana;
+        obecny->dana = obecny->next->dana;
+        obecny->next->dana = schowek;
+        zamiana = 1;
+      }
+      obecny = obecny->next;
+    }
+    koniec = obecny;
+  } while (zamiana);
+}
 void zapisz(List *b, char *nazwa_pliku){
+  FILE *plik = fopen(nazwa_pliku, "w");
+  if (plik == NULL) return;
+
+  Element *obecny = b->head;
+  while (obecny != NULL) {
+    fprintf(plik, "%s;%s;%d;%s;%s\n",
+        obecny->dana.model,
+        obecny->dana.klasa,
+        obecny->dana.moc,
+        obecny->dana.pilot,
+        obecny->dana.stan);
+    obecny = obecny->next;
   }
+  fclose(plik);
+}
 void wczytaj(List *b, char *nazwa_pliku){
   FILE *plik = fopen(nazwa_pliku,"r");
   if (plik == NULL){

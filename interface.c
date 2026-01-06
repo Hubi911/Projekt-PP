@@ -19,22 +19,22 @@ void pokaz_menu(){
      return;
      }
 
-     Element *temp = b->head;
+     Element *obecny = b->head;
      int licznik = 0;
      printf("----Lista Mechow----\n");
-     while(temp != NULL){
+     while(obecny != NULL){
        printf("Mech %d: \n", licznik + 1);
-       printf("Model: %s \n", temp->dana.model);
-       printf("Klasa: %s \n", temp->dana.klasa);
-       printf("Moc: %d \n", temp->dana.moc);
-       if (strcmp(temp->dana.pilot, "-") == 0) {
+       printf("Model: %s \n", obecny->dana.model);
+       printf("Klasa: %s \n", obecny->dana.klasa);
+       printf("Moc: %d \n", obecny->dana.moc);
+       if (strcmp(obecny->dana.pilot, "-") == 0) {
          printf("Pilot: (brak) \n");
        } else {
-         printf("Pilot: %s \n", temp->dana.pilot);
+         printf("Pilot: %s \n", obecny->dana.pilot);
        }
-       printf("Stan: %s \n", temp->dana.stan);
+       printf("Stan: %s \n", obecny->dana.stan);
        printf("-------------------------\n");
-       temp=temp->next;
+       obecny=obecny->next;
        licznik++;
        }
        printf("Laczna liczba mechow: %d\n", licznik);
