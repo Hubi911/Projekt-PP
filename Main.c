@@ -70,7 +70,7 @@ int main(int argc, char *argv[]){
                 printf("--- ZAAWANSOWANE ---\n");
                 printf("1. Edytuj mecha\n");
                 printf("2. Wyszukaj mecha\n");
-                printf("3. Zapisz do pliku (z parametru)\n");
+                printf("3. Zapisz do pliku\n");
                 int wyborr;
                 scanf("%d", &wyborr);
                 if (wyborr == 1)
@@ -86,7 +86,7 @@ int main(int argc, char *argv[]){
                 printf("Konczenie programu...\n");
             break;
             default:
-                printf("Nieznana opcja. Wybierz 1-6.\n");
+                printf("Nieznana opcja. Wybierz 1-7.\n");
         }
     }
     zwolnij_pamiec(&Mechy_lista);
