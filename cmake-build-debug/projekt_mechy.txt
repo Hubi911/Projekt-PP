@@ -5,7 +5,9 @@ Bastion-Wall obronny 88 Brick wymaga_przegladu
 V510 obronny 99 Huck demontaz
 Ragnarok-Prime szturmowy 100 Valkyrie sprawny
 Scout-Eye rekonesansowy 30 Wika sprawny
+MKS100 obronny 66 Kolo demontaz
 Iron-Clad obronny 92 Tank w_naprawie
 Viper-Strike szturmowy 85 Cobra uszkodzony
+VX132 szturmowy 50 FIX demontaz
 Aegis-Shield obronny 60 - wymaga_przegladu
 Phantom-Zero rekonesansowy 40 Spectre sprawny
