@@ -1,0 +1,10 @@
+Ragnarok-Prime szturmowy 100 Valkyrie sprawny
+Titan-X1 szturmowy 95 Maverick sprawny
+Iron-Clad obronny 92 Tank w_naprawie
+Viper-Strike szturmowy 85 Cobra uszkodzony
+Guardian-V2 wsparcia_ogniowego 70 Jan w_naprawie
+Aegis-Shield obronny 60 - wymaga_przegladu
+Shadow-Runner rekonesansowy 45 Ghost uszkodzony
+Phantom-Zero rekonesansowy 40 Spectre sprawny
+Scout-Eye rekonesansowy 30 Wika sprawny
+V10 obronny 40 Mark Uszkodzony
