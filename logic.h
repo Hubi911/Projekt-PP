@@ -6,6 +6,7 @@ void inicjalizacja_listy(List *b);
 void zwolnij_pamiec(List *b);
 int dodaj(List *b, Mech nowy);
 int usun(List *b, char *model);
+int usun_do_demontazu(List *b);
 void sort_nazwa(List *b);
 void sort_moc(List *b);
 void zapisz(List *b, char *nazwa_pliku);

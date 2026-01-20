@@ -33,7 +33,7 @@ int main(int argc, char *argv[]){
                 Mech m = pobierz_od_uzytkownika();
                 int wynik = dodaj(&Mechy_lista, m);
                 if (wynik == 1)
-                    printf("SUKCES: Dodano mecha.\n");
+                    printf("Dodano mecha.\n");
                 else
                     if (wynik == 0)
                         printf("BLAD: Mech o takim modelu juz istnieje!\n");
@@ -42,18 +42,36 @@ int main(int argc, char *argv[]){
                 break;
             }
             case 3: {
-                char model[100];
-                printf("Podaj model mecha do usuniecia: ");
-                scanf("%99s", model);
+                int pod_wybor;
+                printf("--- USUWANIE ---\n");
+                printf("1. Usun pojedynczego mecha (podaj model)\n");
+                printf("2. Wyczysc magazyn (usun wszystkie w stanie 'demontazu')\n");
+                printf("Wybor: ");
+                scanf("%d", &pod_wybor);
 
-                int wynik = usun(&Mechy_lista, model);
-                if (wynik == 1)
-                    printf("SUKCES: Usunieto mecha.\n");
-                else
-                    if (wynik == -2)
-                        printf("BLAD: Nie mozna usunac (mech jest sprawny/w misji)!\n");
-                else
-                    printf("BLAD: Nie znaleziono takiego modelu.\n");
+                if (pod_wybor == 1) {
+                    char model[100];
+                    printf("Podaj model mecha do usuniecia: ");
+                    scanf("%99s", model);
+
+                    int wynik = usun(&Mechy_lista, model);
+                    if (wynik == 1)
+                        printf("Usunieto mecha.\n");
+                    else if (wynik == -2)
+                            printf("BLAD: Mozna usuwac tylko mechy w stanie 'demontazu' lub 'w_naprawie'!\n");
+                    else
+                        printf("BLAD: Nie znaleziono takiego modelu.\n");
+                }
+                else if (pod_wybor == 2) {
+                    int usuniete = usun_do_demontazu(&Mechy_lista);
+                    if (usuniete > 0)
+                        printf("Usunieto %d mechow przeznaczonych do demontazu.\n", usuniete);
+                    else
+                        printf("Brak mechow o statusie 'demontazu'.\n");
+                }
+                else {
+                    printf("Nieprawidlowy wybor.\n");
+                }
                 break;
             }
             case 4:
